@@ -1,20 +1,40 @@
 package HomeWork4;
 
-public class Plant {
-    private  String cone;
+public abstract class Plant {
+    private String smell;
 
-    private  String smell;
+    private String flowering;
 
-    public Plant(String cone, String smell) {
-        this.cone = cone;
+    public Plant(String smell, String flowering) {
         this.smell = smell;
-    }
-
-    public Plant(String cone) {
-        this.cone = cone;
+        this.flowering = flowering;
     }
 
     public Plant() {
     }
-}
 
+    public String getSmell() {
+        return smell;
+    }
+
+    public void setSmell(String smell) {
+        this.smell = smell;
+    }
+
+    public String getFlowering() {
+        return flowering;
+    }
+
+    public void setFlowering(String flowering) {
+        this.flowering = flowering;
+    }
+
+    @Override
+    public String toString() {
+        return "Plant{" +
+                "smell='" + smell + '\'' +
+                ", flowering='" + flowering + '\'' +
+                '}';
+    }
+
+}
